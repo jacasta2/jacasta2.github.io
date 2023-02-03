@@ -1,0 +1,264 @@
+* {
+	margin:0;
+	padding:0;
+	
+	/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
+	box-sizing:border-box; /* Allows to see 2 columns within the container */
+}
+
+html, body { 
+	height:100%;
+}
+
+html {
+	min-width:868px;
+}
+
+body { 
+	/*background:#c1d103;*/ /* Green at the bottom */
+	background:#FFF;
+	font-family:Tahoma, sans-serif;
+	font-size:100%; 
+	line-height:1em;
+	color:#767676
+}
+
+ul, ol { 
+	list-style:none;
+}
+
+table, table td { 
+	padding:0;
+	border:none;
+}
+
+.wrapper { 
+	width:100%;
+	overflow:hidden;
+}
+
+/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
+/* Create two equal columns that floats next to each other */
+.column {
+  float:left;
+  width:50%;
+  padding:10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+
+/*===== header =====*/
+#header {
+	height:218px; /*234*/
+	background:#FFF /* White on header */
+}
+
+#header .slogan {
+	position:absolute;
+	left:0px;
+	top:100px;
+	width:100%;
+	line-height:1.30;
+}
+
+#header .nav {
+	position:absolute;
+	right:0;
+	top:150px; /*166*/
+}
+
+#header .nav li { float:left; padding-left:1px;}
+
+#header .nav li a {
+	float:left;
+	background:url(images/nav-bg1.png) no-repeat 0 100%;
+	width:125px;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#FFF;
+	text-decoration:none;
+	padding:21px 0 20px 0;
+	margin-top:11px;
+}
+
+#header .nav li a:hover {
+	opacity:0.7;	
+}
+
+#header .nav li a.current {
+	background:url(images/nav-bg2.png) no-repeat 0 0;
+	margin-top:0;
+	padding:27px 0 26px 0;
+	color:#FFF;
+}
+
+
+/*==== GLOBAL =====*/
+.container {
+	width:868px;
+	margin:0 auto;
+	font-size:0.75em;
+	position:relative;
+	/*background:#000000;*/ /* Black on top of content and footer */
+	background:#f8f8f8
+}
+
+#content {
+	width:100%;
+	/*background:#FF0000;*/ /* Red on top of content */
+	background:#FFF;
+}
+
+#content .inside {
+	padding-top:30px;
+	padding-right:35px;
+	padding-bottom:30px;
+	padding-left:35px;
+	/*background:#fff;*/ /* White on content, overwritting container black */
+	background:#f8f8f8; 
+}
+
+#content .home {
+	font-size:20px;
+	line-height:1.50;		
+}
+
+#content .about {
+	font-size:16px;
+	line-height:1.50;		
+}
+
+#content .aboutTable {
+	padding-top:30px;
+}
+
+#content .aboutCV {
+	padding-top:30px;
+}
+
+/* https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html */
+.CVbutton {
+	width:100px;
+	background-color:#000;
+	border:none;
+	color:white;
+	padding:15px 20px 15px 20px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	border-radius:8px;
+	cursor:pointer;
+}
+
+.CVbutton:hover{
+	opacity:0.7;	
+}
+
+#content .projectsTable {
+	padding-top:0px;
+}
+
+#content .projectDetails {
+	width:95%;
+	height:auto;
+	background:#FFF;
+}
+
+#content .projectDetails .date {
+	padding-top:20px;
+	padding-left:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	font-size:14px;	
+}
+
+#content .projectDetails .title {
+	padding-left:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	color:#000;
+	font-size:18px;
+	font-weight:bold;
+	line-height:1.4;
+	/*display:inline-block;*/
+	cursor:pointer;
+}
+
+#content .projectDetails .summary {
+	padding-left:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	color:#000;
+	font-size:14px;
+	line-height:1.3;
+	/*display:inline-block;*/
+}
+
+#content .projectDetails .readMore {
+	padding-left:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	color:#000;
+	font-size:14px;
+	cursor:pointer;
+}
+
+#content .githubproject:hover {
+	opacity:0.7;
+}
+
+
+/*===== footer =====*/
+#footer .inside {
+	padding-top:30px;
+	padding-right:35px;
+	padding-bottom:30px;
+	padding-left:35px;
+	/*background: #E1C16E;*/ /* Gold on footer, overwritting container black */
+	background:#E5E4E2;
+}
+
+#footer .social {
+	text-align:center;
+}
+
+#footer .linkedin:hover {
+	opacity:0.7;
+}
+
+#footer .github:hover {
+	opacity:0.7;	
+}
+
+#footer .scholar:hover {
+	opacity:0.7;	
+}
+
+#footer .copyright {	
+	font-family:Tahoma;
+	font-size:10px;
+	text-align:center;
+	padding-top:10px
+}
+
+
+/*----- links -----*/
+a:link {
+ 	color:#28282B;
+  	text-decoration:none;
+}
+a:visited {
+  	color:#28282B;
+	text-decoration:none;
+}
+a:hover {
+	opacity:0.7;
+}
