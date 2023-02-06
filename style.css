@@ -55,22 +55,23 @@ table, table td {
 
 /*===== header =====*/
 #header {
-	height:218px; /*234*/
+	height:180px;
 	background:#FFF /* White on header */
 }
 
 #header .slogan {
 	position:absolute;
+	height:50px;
 	left:0px;
-	top:100px;
-	width:100%;
+	top:130px;
+	width:50%;
 	line-height:1.30;
 }
 
 #header .nav {
 	position:absolute;
-	right:0;
-	top:150px; /*166*/
+	right:0px;
+	top:112px;
 }
 
 #header .nav li { float:left; padding-left:1px;}
