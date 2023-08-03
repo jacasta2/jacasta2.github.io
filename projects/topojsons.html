@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 
-<body id="page5">
+<body id="page4">
 
 <!-- header -->
 <div id="header">
@@ -39,26 +39,26 @@
   	    
         <div class="about">
           <p style="text-align:center; color:#000; font-size:20px; font-weight:bold">
-            Payment default of credit card clients: EDA and supervised ML modeling
+            Creation of TopoJSON maps of Colombian departments and towns from GeoJSON maps
           </p>
           <p>&nbsp;</p>
           <p>
-            This data science project performs an Exploratory Data Analysis (EDA) on data related to default payments of credit card clients and trains several supervised machine learning models to predict defaulting. The data corresponds to the <a href="https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset" target="_blank" rel="noreferrer">Default of credit card clients dataset</a> available in Kaggle.
+            This data science and visualization project creates TopoJSON maps of Colombian departments and towns from corresponding GeoJSON maps, improving the visualization of specific territories.
 		  </p>
           <p>&nbsp;</p>
           <p> 	
-		    The EDA (i) checks the distribution of some variables and performs variable transformations (log, square root and cubic root) in case of non-normal behaviors and (ii) explores the relationship between some variables and defaulting. A future update will perform feature engineering.
+		    One day I was working with a Power BI dashboard (shared with me by a colleague, who got the dashboard from one of her colleagues, and so on) to visualize several stats related to Colombian departments. The dashboard had a shape map of Colombian departments. I was curious and wanted to learn about this particular map. I couldn't track down the dashboard's original author nor I could extract the source file of the map from the Power BI file.
 		  </p>
           <p>&nbsp;</p>
           <p> 
-		    The modeling work trains, validates and tests a logistic regression and an Extreme Gradient Boosting (XGBoost) classifier. It begins with a basic model evaluation using train/validation/test datasets and finishes with a more systematic approach for model evaluation through hyperparamerer tuning using k-fold cross-validation. A future update will replicate the analysis with a neural network and work with a basic deployment.
+		    I thus started this project to create my own shape maps. The starting point was a TopoJSON map of Colombian towns I found on Internet. The map was correct, but it wasn't that appealing for visualization purposes since some specific territories were pretty small and far from mainland. Colombian maps one commonly sees in official reports have these territories scaled and closer to mainland. 
 		  </p>
       	  <p>&nbsp;</p>
           <p> 
-		    Details about the implementation and the results can be found in the project’s repo.
+		    The main work of this project revolves around modifying the geometries from offical GeoJSON maps of Colombian departments and towns to make those territories more visually appealing. Once the geometries are modified, the updated GeoJSON maps are converted to TopoJSON maps that can be used in Power BI. Details about the implementation and the results can be found in the project’s repo.
 		  </p>
           <div class="social" style="padding-top:10px; text-align:center">
-            <a href="https://bit.ly/jaime-cc-default" target="_blank" rel="noreferrer" class="githubproject">
+            <a href="https://bit.ly/jaime-colombia-map" target="_blank" rel="noreferrer" class="githubproject">
               <img src="../images/github-project.png"></img>
             </a>
           </div>
