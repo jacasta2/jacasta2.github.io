@@ -1,0 +1,122 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Projects | Jaime Andrés Castañeda</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body id="page5">
+
+<!-- header -->
+<div id="header">
+  <div class="container">
+    
+    <!-- .slogan -->
+    <div class="slogan">
+      <img src="../images/insight.png"></img>
+    </div>
+    <!-- /.slogan -->
+    
+    <!-- .nav -->
+    <ul class="nav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../projects.html">Projects</a></li>
+    </ul>
+    <!-- /.nav -->
+  
+  </div>
+</div>
+<!-- /header -->
+
+<!-- content -->
+<div id="content">
+  <div class="container">
+    <div class="inside">
+  	  <div class="wrapper">
+  	    
+        <div class="about">
+          <p style="text-align:center; color:#000; font-size:20px; font-weight:bold">
+            Jokic's assists and Murray's points: what do the Denver Nuggets miss more?
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            In this data science project, I deploy a Streamlit app that pulls data from a Hopsworks feature store and the nba_api and digs into this question through logistic regression and SHAP values.
+		  </p>
+          <p>&nbsp;</p>
+          <p> 	
+		    The motivation for this work came to me while watching last season's (2022-23) NBA finals between the Denver Nuggets and the Miami Heat. I was watching the finals on ESPN when one of the commentators, the great Ernesto Jerez, asked what were the Nuggets missing more: Jokic's assists or Murray points. I don't recall what game was it nor the exact moment during the game when Ernesto raised this question, and it seems difficult to pinpoint it since the Nuggets were rarely trailing behind in the score during any of the finals games.
+		  </p>
+          <p>&nbsp;</p>
+          <p> 
+		    At any rate, I found the question interesting and decided to dig into it. I started this endeavor by creating three notebooks that (i) pull the neccesary data from the nba_api and prepare it, (ii) perform an EDA to get an understanding of the data and (iii) fit a logistic regression model and compute SHAP values to explore the influence of Jokic's assists and Murray's points on the Nuggets' chances of winning a game.
+		  </p>
+      	  <p>&nbsp;</p>
+          <p> 
+		    I continued the work by deploying a Streamlit app. The app (i) performs an ETL process that pulls data from the nba_api, prepares it and pushes it into a Hopsworks feature store and (ii) fits a logistic regression model and computes SHAP values to compare the influence of Jokic's assists and Murray's points (among others) on the Nuggets' chances of winning a game. The app is available in <a href="https://bit.ly/jaime-nba-frontend" target="_blank" rel="noreferrer">Streamlit</a> .
+		  </p>
+      	  <p>&nbsp;</p>
+          <p> 
+		    Details about the implementation and the results can be found in the project’s repo.
+		  </p>
+          <div class="social" style="padding-top:10px; text-align:center">
+            <a href="https://bit.ly/jaime-nba" target="_blank" rel="noreferrer" class="githubproject">
+              <img src="../images/github-project.png"></img>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+  	</div>
+  </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="footer">
+  <div class="container">
+    <div class="inside">
+      <div class="wrapper">
+       	<div class="social">
+          <a href="https://bit.ly/jaime-linkedin" target="_blank" rel="noreferrer" class="linkedin">
+            <img src="../images/linkedin-30.png"></img>
+          </a>
+          <a href="https://bit.ly/jaime-github" target="_blank" rel="noreferrer" class="github">
+            <img src="../images/github-30.png"></img>
+          </a>
+          <a href="https://bit.ly/jaime-scholar" target="_blank" rel="noreferrer" class="scholar">
+            <img src="../images/google-scholar-30.png"></img>
+          </a>
+        </div>
+        <div class="copyright">&copy; 2023 Jaime Andrés Castañeda
+        <br />
+        Black icons by
+          <a
+            href="https://icons8.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Icons8
+          </a>
+        <br />
+        Color icons by
+          <a
+            href="https://www.flaticon.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Roundicons - Flaticon
+          </a>  
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /footer -->
+
+</body>
+
+</html>
