@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 
-<body id="page9">
+<body id="page10">
 
 <!-- header -->
 <div id="header">
@@ -39,30 +39,30 @@
   	    
         <div class="about">
           <p style="text-align:center; color:#000; font-size:20px; font-weight:bold">
-            Jokic's assists and Murray's points: what do the Denver Nuggets miss more?
+            NLP paper recommender: text processing, vector embeddings and vector database
           </p>
           <p>&nbsp;</p>
           <p>
-            In this data science project, I deploy a ML app that compares the influence of a pair of NBA teammates’ stats on their team’s winning chances using logistic regression, SHAP values, Hopsworks and Streamlit.
+            In this data science project, I deploy an NLP app that recommends papers based on the similarity between the papers’ abstracts and the user’s interests using text processing, vector embeddings, Pinecone and Streamlit.
 		  </p>
           <p>&nbsp;</p>
           <p> 	
-		    The motivation for this work came to me while watching last season's (2022-23) NBA finals between the Denver Nuggets and the Miami Heat. I was watching the finals on ESPN when one of the commentators, the great Ernesto Jerez, asked what were the Nuggets missing more: Jokic's assists or Murray points. I don't recall what game was it nor the exact moment during the game when Ernesto raised this question, and it seems difficult to pinpoint it since the Nuggets were rarely trailing behind in the score during any of the finals games.
+		    This project was motivated by my interest in learning about NLP and LLM and its materialization was adapted from <a href="https://datamachines.xyz/2022/11/22/one-project-to-become-an-nlp-engineer/" target="_blank" rel="noreferrer">Pau Labarta Bajo's blog entry on NLP engineering</a>. The app is relatively simple at its core: it reads a user's prompt about what topic she would like to read about, processes it using common text processing tasks, generates its vector embedding, connects to a Pinecone index containing vector embeddings of abstracts and finds what abstracts are the most similar to the user's input.
 		  </p>
           <p>&nbsp;</p>
           <p> 
-		    At any rate, I found the question interesting and decided to dig into it. I started this endeavor by creating three notebooks that (i) pull the neccesary data from the <a href="https://github.com/swar/nba_api" target="_blank" rel="noreferrer">nba_api</a> and prepare it, (ii) perform an EDA to get an understanding of the data and (iii) fit a logistic regression model and compute SHAP values to explore the influence of Jokic's assists and Murray's points on the Nuggets' chances of winning a game.
+		    While the research area is narrow (based on my former academic research area: Behavioral Operations), I'd like to emphasize the app's data science components. Initially, I downloaded data from 282 abstracts using the Scopus Search API. I processed their data and generated vector embeddings using their abstracts. Specifically, I used the TF-IDF vectorizer with dimension equal to 128 using unigrams and bigrams. I saved the vectorizer and pushed the embeddings into a Pinecone index. This first step was done in notebooks. Note that the vectorizer and the Pinecone index are used in the deployed app.
 		  </p>
-      	  <p>&nbsp;</p>
+          <p>&nbsp;</p>
           <p> 
-		    I continued the work by deploying a frontend. The frontend (i) performs an ETL process that pulls data from the nba_api, prepares it and pushes it into a Hopsworks feature store and (ii) fits a logistic regression model and computes SHAP values to compare the influence of Jokic's assists and Murray's points (among others) on the Nuggets' chances of winning a game. The fronted is available as a <a href="https://bit.ly/jaime-nba-frontend" target="_blank" rel="noreferrer">Streamlit app</a>.
+		    Then, I developed the frontend and remaining supporting Python scripts. The scripts (i) process the user's prompt using common text processing tasks, (ii) vectorize it using the saved TF-IDF vectorizer from the first step, (iii) connect to the Pinecone index and query the vector database using the vectorized prompt and cosine similarity as the matching criterion (which was defined as the matching criterion when creating the Pinecone index in the first step). The frontend lists the top 10 papers, showing their titles, journals and DOIs, and it's available as a <a href="https://bit.ly/jaime-paper-recommender-frontend" target="_blank" rel="noreferrer">Streamlit app</a>.  
 		  </p>
       	  <p>&nbsp;</p>
           <p> 
 		    Details about the implementation and the results can be found in the project’s repo.
 		  </p>
           <div class="social" style="padding-top:10px; text-align:center">
-            <a href="https://bit.ly/jaime-nba" target="_blank" rel="noreferrer" class="githubproject">
+            <a href="https://bit.ly/jaime-paper-recommender" target="_blank" rel="noreferrer" class="githubproject">
               <img src="../images/github-project.png"></img>
             </a>
           </div>
