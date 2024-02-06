@@ -1,3 +1,3 @@
-# jacasta2.github.io
+# Personal website
 
 This repo stores the files of my personal website.
